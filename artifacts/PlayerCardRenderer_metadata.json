@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"TA_fix/PlayerCard_Optimized.sol": "PlayerCardRenderer"
+			"contracts/PlayerCard_Optimized.sol": "PlayerCardRenderer"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -256,12 +256,12 @@
 				"dweb:/ipfs/QmVUSvooZKEdEdap619tcJjTLcAuH6QBdZqAzWwnAXZAWJ"
 			]
 		},
-		"TA_fix/PlayerCard_Optimized.sol": {
-			"keccak256": "0x4c72c4f274a69ca2359649a7cb3e04491a7ed5a42f061f677f5f0a5ca0c207fe",
+		"contracts/PlayerCard_Optimized.sol": {
+			"keccak256": "0x69d1cc69d53e6bae027aeabfddc51c35e5453be8de18927866ee0879397363c1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f981f67ca03a249045f0658fb2b0e90f54d172917d6b0930c165f8a7a3351f47",
-				"dweb:/ipfs/Qmd2Jz6N1fkBg7hLqMfNUPzenkVRNRF3dU5ZBj9tvvS8gh"
+				"bzz-raw://0496e5fe984f4be23b95c557eb218e3fa78921fc6fab0d123c4e9c6e87d215e1",
+				"dweb:/ipfs/QmYtQZLGxmH4uaW986Wxhze2A2WWeVRRdDgD1rqXE464a1"
 			]
 		}
 	},

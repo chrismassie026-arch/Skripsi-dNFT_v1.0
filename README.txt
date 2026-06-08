@@ -1,28 +1,68 @@
-REMIX DEFAULT WORKSPACE
+MPL INDONESIA DYNAMIC NFT (dNFT) — TUGAS AKHIR
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+Implementasi Dynamic NFT (dNFT) untuk kartu pemain MPL Indonesia
+menggunakan Ethereum (Sepolia Testnet), Chainlink Functions, dan Chainlink Automation.
 
-This workspace contains 3 directories:
+============================================================
+STRUKTUR REPOSITORI
+============================================================
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+contracts/
+  PlayerCardOptimized.sol     - Model B: arsitektur berlapis dengan library PlayerCardRenderer
+  PlayerCard_NonLayered.sol   - Model A: arsitektur monolitik tanpa library eksternal
 
-SCRIPTS
+scripts/
+  deploy_with_ethers.ts       - Script deployment kontrak ke Sepolia via ethers.js
 
-The 'scripts' folder has two typescript files which help to deploy the 'Storage' contract using 'ethers.js' libraries.
+============================================================
+ARSITEKTUR SISTEM
+============================================================
 
-For the deployment of any other contract, just update the contract name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts`
+- Standar token  : ERC-721 (ERC721URIStorage)
+- Oracle data    : Chainlink Functions — mengeksekusi JavaScript untuk memanggil REST API
+- Automasi       : Chainlink Automation — memicu pembaruan statistik secara terjadwal
+- Penyimpanan    : Metadata dan SVG sepenuhnya on-chain (Base64-encoded JSON)
+- Jaringan       : Ethereum Sepolia Testnet
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+============================================================
+KONFIGURASI COMPILER
+============================================================
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
+Compiler  : Solidity 0.8.30+commit.73712a01
+EVM       : prague (default)
+Optimizer : Enabled — 200 runs
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+============================================================
+CARA DEPLOY
+============================================================
+
+1. Buka Remix IDE (https://remix.ethereum.org) atau Remix Desktop
+2. Di tab Solidity Compiler, sesuaikan konfigurasi sesuai dengan bagian #KONFIGURASI COMPILER
+3. Compile salah satu kontrak di folder contracts/
+4. Pastikan MetaMask terhubung ke jaringan Sepolia
+5. Di tab Deploy, masukkan Chainlink Subscription ID sebagai argumen constructor
+6. Klik Deploy
+
+Setelah deploy:
+- Panggil setSourceCode() dengan kode JavaScript Chainlink Functions
+- Panggil safeMint() untuk mencetak token pemain
+- Panggil setAutomationSettings() untuk mengaktifkan automasi
+
+============================================================
+DEPENDENSI
+============================================================
+
+- OpenZeppelin Contracts v5  : ERC721URIStorage, Ownable, Strings, Base64
+- Chainlink Contracts        : FunctionsClient, FunctionsRequest
+- Jaringan                   : Ethereum Sepolia Testnet
+- Oracle                     : Chainlink Functions & Automation (Sepolia)
+- Wallet                     : MetaMask
+
+============================================================
+CATATAN
+============================================================
+
+- Interval minimum automasi  : 3600 detik (1 jam)
+- Gas limit callback DON     : 300.000 unit
+- Format data oracle         : uint256 packed (bit-shifting 64-bit per statistik)
+- Kedua kontrak dibandingkan dalam analisis gas cost pada Bab 4 skripsi
