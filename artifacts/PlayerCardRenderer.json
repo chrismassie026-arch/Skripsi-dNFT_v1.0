@@ -15,6 +15,22 @@
 		"Custom": {
 			"linkReferences": {},
 			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
 		}
 	},
 	"data": {
@@ -22,32 +38,30 @@
 			"functionDebugData": {},
 			"generatedSources": [],
 			"linkReferences": {},
-			"object": "6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea264697066735822122062de855af620df68801c1c07a2db1d7a2d9f7d0bfcc40fa5616b973f57213f0564736f6c63430008220033",
-			"opcodes": "PUSH1 0x80 DUP1 PUSH1 0x40 MSTORE CALLVALUE PUSH1 0x17 JUMPI PUSH1 0x39 SWAP1 DUP2 PUSH1 0x1C DUP3 CODECOPY ADDRESS DUP2 POP POP RETURN JUMPDEST PUSH0 DUP1 REVERT INVALID PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH3 0xDE855A 0xF6 KECCAK256 0xDF PUSH9 0x801C1C07A2DB1D7A2D SWAP16 PUSH30 0xBFCC40FA5616B973F57213F0564736F6C63430008220033000000000000 ",
-			"sourceMap": "387:11309:28:-:0;;;;;;;;;;;;;;;;;;;;;"
+			"object": "60556032600b8282823980515f1a607314602657634e487b7160e01b5f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f5ffdfea26469706673582212203293e55aca1f85c27bf7ce286150d6faa23a9d662803ec3d3e447e9304102a4664736f6c634300081e0033",
+			"opcodes": "PUSH1 0x55 PUSH1 0x32 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH0 BYTE PUSH1 0x73 EQ PUSH1 0x26 JUMPI PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH0 MSTORE PUSH0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH0 REVERT JUMPDEST ADDRESS PUSH0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 ORIGIN SWAP4 JUMPF 0x5ACA 0x1F DUP6 0xC2 PUSH28 0xF7CE286150D6FAA23A9D662803EC3D3E447E9304102A4664736F6C63 NUMBER STOP ADDMOD 0x1E STOP CALLER ",
+			"sourceMap": "1041:4262:28:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;1041:4262:28;;;;;;;;;;;;;;;;;"
 		},
 		"deployedBytecode": {
 			"functionDebugData": {},
 			"generatedSources": [],
 			"immutableReferences": {},
 			"linkReferences": {},
-			"object": "5f80fdfea264697066735822122062de855af620df68801c1c07a2db1d7a2d9f7d0bfcc40fa5616b973f57213f0564736f6c63430008220033",
-			"opcodes": "PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH3 0xDE855A 0xF6 KECCAK256 0xDF PUSH9 0x801C1C07A2DB1D7A2D SWAP16 PUSH30 0xBFCC40FA5616B973F57213F0564736F6C63430008220033000000000000 ",
-			"sourceMap": "387:11309:28:-:0;;"
+			"object": "730000000000000000000000000000000000000000301460806040525f5ffdfea26469706673582212203293e55aca1f85c27bf7ce286150d6faa23a9d662803ec3d3e447e9304102a4664736f6c634300081e0033",
+			"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 ORIGIN SWAP4 JUMPF 0x5ACA 0x1F DUP6 0xC2 PUSH28 0xF7CE286150D6FAA23A9D662803EC3D3E447E9304102A4664736F6C63 NUMBER STOP ADDMOD 0x1E STOP CALLER ",
+			"sourceMap": "1041:4262:28:-:0;;;;;;;;"
 		},
 		"gasEstimates": {
 			"creation": {
-				"codeDepositCost": "11400",
-				"executionCost": "infinite",
-				"totalCost": "infinite"
+				"codeDepositCost": "17000",
+				"executionCost": "96",
+				"totalCost": "17096"
 			},
 			"internal": {
-				"_getStatsRows(string memory,uint64,uint64,uint64,uint64,string memory,string memory)": "infinite",
-				"getBackgroundLayer(uint8)": "infinite",
+				"_getStatsRows(struct PlayerData memory,string memory,string memory)": "infinite",
+				"getBackgroundLayer()": "infinite",
 				"getPixelArtLayer()": "infinite",
-				"getStatsLayer(string memory,string memory,uint64,uint64,uint64,uint64,string memory,uint8)": "infinite",
-				"getTierIndex(uint256)": "infinite",
-				"getTierName(uint8)": "infinite"
+				"getStatsLayer(struct PlayerData memory,string memory)": "infinite"
 			}
 		},
 		"methodIdentifiers": {}

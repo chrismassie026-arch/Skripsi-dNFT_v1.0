@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.34+commit.80d5c536"
+		"version": "0.8.30+commit.73712a01"
 	},
 	"language": "Solidity",
 	"output": {
@@ -1304,7 +1304,7 @@
 		"compilationTarget": {
 			"TA/PlayerCard_A.sol": "MplPlayerCard_A"
 		},
-		"evmVersion": "osaka",
+		"evmVersion": "prague",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -1542,11 +1542,11 @@
 			]
 		},
 		"TA/PlayerCard_A.sol": {
-			"keccak256": "0xf611e6d58ab5edd2f8f968044464b3b441c230333e90d1a450e17216d640c147",
+			"keccak256": "0xa406afb18534ff90c56a497b6671be787ab2c90c5e8aa71f5e50b20e88b0ecb8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9dcbfba94ac86dd8c9ee5f00a70bcb178162e69ab27aa2eb2fa2b4c9509d6052",
-				"dweb:/ipfs/QmNQhN87voM5jn7M6DWvAwhBmZffmeXM427aptViCVvJaD"
+				"bzz-raw://65983f1e9abfe179a5970ba600dfb081d66f2a4c19a93551ff08f17eff7dfa5c",
+				"dweb:/ipfs/QmbbHAh3UDmvYJqAhYEqi8NCKRbotoSMFpfc9j3pJPCFFn"
 			]
 		}
 	},

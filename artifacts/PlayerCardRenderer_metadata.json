@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.34+commit.80d5c536"
+		"version": "0.8.30+commit.73712a01"
 	},
 	"language": "Solidity",
 	"output": {
@@ -18,9 +18,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"TA/PlayerCard_A.sol": "PlayerCardRenderer"
+			"TA_fix/PlayerCard_Optimized.sol": "PlayerCardRenderer"
 		},
-		"evmVersion": "osaka",
+		"evmVersion": "prague",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -29,8 +29,7 @@
 			"enabled": true,
 			"runs": 200
 		},
-		"remappings": [],
-		"viaIR": true
+		"remappings": []
 	},
 	"sources": {
 		"@chainlink/contracts/src/v0.8/functions/v1_0_0/FunctionsClient.sol": {
@@ -257,12 +256,12 @@
 				"dweb:/ipfs/QmVUSvooZKEdEdap619tcJjTLcAuH6QBdZqAzWwnAXZAWJ"
 			]
 		},
-		"TA/PlayerCard_A.sol": {
-			"keccak256": "0xf611e6d58ab5edd2f8f968044464b3b441c230333e90d1a450e17216d640c147",
+		"TA_fix/PlayerCard_Optimized.sol": {
+			"keccak256": "0x4c72c4f274a69ca2359649a7cb3e04491a7ed5a42f061f677f5f0a5ca0c207fe",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9dcbfba94ac86dd8c9ee5f00a70bcb178162e69ab27aa2eb2fa2b4c9509d6052",
-				"dweb:/ipfs/QmNQhN87voM5jn7M6DWvAwhBmZffmeXM427aptViCVvJaD"
+				"bzz-raw://f981f67ca03a249045f0658fb2b0e90f54d172917d6b0930c165f8a7a3351f47",
+				"dweb:/ipfs/Qmd2Jz6N1fkBg7hLqMfNUPzenkVRNRF3dU5ZBj9tvvS8gh"
 			]
 		}
 	},

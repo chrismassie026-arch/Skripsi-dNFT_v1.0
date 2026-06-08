@@ -1,4 +1,12 @@
 {
+  "language": "Solidity",
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "viaIR": true
+  },
   "solidity-compiler": {
     "language": "Solidity",
     "settings": {
@@ -6,7 +14,6 @@
         "enabled": true,
         "runs": 200
       },
-      "viaIR": true,
       "outputSelection": {
         "*": {
           "": [
@@ -28,8 +35,5 @@
         }
       }
     }
-  },
-  "scenarios": {
-    "lastSavedScenario": "scenario2.json"
   }
 }
